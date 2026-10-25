@@ -19,8 +19,8 @@ The Podfile points to `../movies_flutter_module`, so both repos must live in the
 Prerequisites: Xcode, Flutter SDK, CocoaPods.
 
 ```bash
-git clone <module-repo-url> movies_flutter_module
-git clone <ios-repo-url> movies_ios_app
+git clone https://github.com/sharmavipin11289/movies_flutter_module.git  movies_flutter_module
+git clone https://github.com/sharmavipin11289/movies_ios_app.git movies_ios_app
 
 cd movies_flutter_module
 # add your TMDB key, see the module README
@@ -72,8 +72,4 @@ xcodebuild test -workspace MoviesiOSApp.xcworkspace -scheme MoviesiOSApp \
   -destination 'platform=iOS Simulator,name=iPhone 16 Pro'
 ```
 
-(Use a simulator name you have installed.)
 
-## Screenshots
-
-(add: home, Flutter list, trailer screen)
