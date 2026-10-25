@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MoviesiOSAppApp: App {
+    @StateObject private var flutter = FlutterCoordinator()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(flutter)
         }
     }
 }

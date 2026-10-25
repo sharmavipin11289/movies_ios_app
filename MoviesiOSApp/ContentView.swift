@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var flutter: FlutterCoordinator
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 24) {
+            Image(systemName: "film.stack")
+                .font(.system(size: 64))
+            Text("Movies")
+                .font(.largeTitle.bold())
+            Button("Show List of Movies") {
+                flutter.showFlutter()
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
         }
         .padding()
     }
