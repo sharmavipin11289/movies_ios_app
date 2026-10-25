@@ -8,31 +8,61 @@
 import XCTest
 @testable import MoviesiOSApp
 
-final class MoviesiOSAppTests: XCTestCase {
+final class TrailerRequestTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_init_parsesAllArguments() {
+        let request = TrailerRequest(arguments: [
+            "movieId": 550,
+            "title": "Fight Club",
+            "youtubeKey": "abc123",
+        ])
+
+        XCTAssertEqual(request?.movieId, 550)
+        XCTAssertEqual(request?.title, "Fight Club")
+        XCTAssertEqual(request?.youtubeKey, "abc123")
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_init_keepsKeyNilWhenFlutterSendsNull() {
+        let request = TrailerRequest(arguments: [
+            "movieId": 1,
+            "title": "No Trailer",
+            "youtubeKey": NSNull(),
+        ])
+
+        XCTAssertNotNil(request)
+        XCTAssertNil(request?.youtubeKey)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-        // XCTest Documentation
-        // https://developer.apple.com/documentation/xctest
+    func test_init_treatsEmptyKeyAsNil() {
+        let request = TrailerRequest(arguments: [
+            "movieId": 1,
+            "title": "t",
+            "youtubeKey": "",
+        ])
+
+        XCTAssertNil(request?.youtubeKey)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func test_init_returnsNilWhenMovieIdIsMissing() {
+        XCTAssertNil(TrailerRequest(arguments: ["title": "t"]))
     }
 
+    func test_init_returnsNilWhenArgumentsAreNotAMap() {
+        XCTAssertNil(TrailerRequest(arguments: "oops"))
+        XCTAssertNil(TrailerRequest(arguments: nil))
+    }
+
+    func test_embedHTML_containsTheYouTubeEmbedUrl() {
+        let request = TrailerRequest(movieId: 1, title: "t", youtubeKey: "abc123")
+
+        XCTAssertTrue(
+            request.embedHTML?.contains("youtube.com/embed/abc123") ?? false
+        )
+    }
+
+    func test_embedHTML_isNilWithoutKey() {
+        let request = TrailerRequest(movieId: 1, title: "t", youtubeKey: nil)
+
+        XCTAssertNil(request.embedHTML)
+    }
 }
