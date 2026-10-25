@@ -5,6 +5,10 @@ load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
 
 target 'MoviesiOSApp' do
   install_all_flutter_pods(flutter_application_path)
+
+  target 'MoviesiOSAppTests' do
+    inherit! :search_paths
+  end
 end
 
 post_install do |installer|

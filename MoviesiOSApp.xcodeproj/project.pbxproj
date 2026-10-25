@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73CD56CE607BC821C64D75BD /* libPods-MoviesiOSAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D1BB7723D4F42F00A63850 /* libPods-MoviesiOSAppTests.a */; };
 		D79FFB69D1725A87589DC6B1 /* libPods-MoviesiOSApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 980F4855BBFE6BB75708CD8F /* libPods-MoviesiOSApp.a */; };
 /* End PBXBuildFile section */
 
@@ -28,27 +29,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A1FE85A90D8DABD2D2526AE /* Pods-MoviesiOSAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesiOSAppTests.release.xcconfig"; path = "Target Support Files/Pods-MoviesiOSAppTests/Pods-MoviesiOSAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D2476C3893B3C371FCC90D0 /* Pods-MoviesiOSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesiOSApp.debug.xcconfig"; path = "Target Support Files/Pods-MoviesiOSApp/Pods-MoviesiOSApp.debug.xcconfig"; sourceTree = "<group>"; };
 		894BCB76308DDAC600AE8E1D /* MoviesiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		894BCB83308DDAC800AE8E1D /* MoviesiOSAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesiOSAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		894BCB8D308DDAC800AE8E1D /* MoviesiOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesiOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		980F4855BBFE6BB75708CD8F /* libPods-MoviesiOSApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoviesiOSApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D1BB7723D4F42F00A63850 /* libPods-MoviesiOSAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoviesiOSAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACFB58B379A0297F5918AA7A /* Pods-MoviesiOSAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesiOSAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MoviesiOSAppTests/Pods-MoviesiOSAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0C62E45FD9EC69380DE6AC0 /* Pods-MoviesiOSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesiOSApp.release.xcconfig"; path = "Target Support Files/Pods-MoviesiOSApp/Pods-MoviesiOSApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		894BCB78308DDAC600AE8E1D /* MoviesiOSApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MoviesiOSApp;
 			sourceTree = "<group>";
 		};
 		894BCB86308DDAC800AE8E1D /* MoviesiOSAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MoviesiOSAppTests;
 			sourceTree = "<group>";
 		};
 		894BCB90308DDAC800AE8E1D /* MoviesiOSAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MoviesiOSAppUITests;
 			sourceTree = "<group>";
 		};
@@ -67,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CD56CE607BC821C64D75BD /* libPods-MoviesiOSAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				980F4855BBFE6BB75708CD8F /* libPods-MoviesiOSApp.a */,
+				A0D1BB7723D4F42F00A63850 /* libPods-MoviesiOSAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -93,6 +105,8 @@
 			children = (
 				5D2476C3893B3C371FCC90D0 /* Pods-MoviesiOSApp.debug.xcconfig */,
 				C0C62E45FD9EC69380DE6AC0 /* Pods-MoviesiOSApp.release.xcconfig */,
+				ACFB58B379A0297F5918AA7A /* Pods-MoviesiOSAppTests.debug.xcconfig */,
+				4A1FE85A90D8DABD2D2526AE /* Pods-MoviesiOSAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -149,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 894BCB98308DDAC800AE8E1D /* Build configuration list for PBXNativeTarget "MoviesiOSAppTests" */;
 			buildPhases = (
+				A0F0CAA84B372D8BDA9692F0 /* [CP] Check Pods Manifest.lock */,
 				894BCB7F308DDAC800AE8E1D /* Sources */,
 				894BCB80308DDAC800AE8E1D /* Frameworks */,
 				894BCB81308DDAC800AE8E1D /* Resources */,
@@ -261,14 +276,32 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
 			name = "[CP-User] Embed Flutter Build movies_flutter_module Script";
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../movies_flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
+		};
+		A0F0CAA84B372D8BDA9692F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoviesiOSAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		B179D547EAD311ADB715AAE9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -297,11 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
 			name = "[CP-User] Run Flutter Build movies_flutter_module Script";
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../movies_flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
@@ -533,6 +562,7 @@
 		};
 		894BCB99308DDAC800AE8E1D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACFB58B379A0297F5918AA7A /* Pods-MoviesiOSAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -555,6 +585,7 @@
 		};
 		894BCB9A308DDAC800AE8E1D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A1FE85A90D8DABD2D2526AE /* Pods-MoviesiOSAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
