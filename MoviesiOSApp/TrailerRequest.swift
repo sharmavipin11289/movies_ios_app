@@ -52,7 +52,7 @@ struct TrailerRequest: Identifiable, Equatable {
         </head>
         <body>
         <iframe
-          src="https://www.youtube.com/embed/\(youtubeKey)?playsinline=1&autoplay=1&rel=0"
+          src="https://www.youtube-nocookie.com/embed/\(youtubeKey)?playsinline=1&autoplay=1&rel=0"TrailerRequestTests
           allow="autoplay; encrypted-media; picture-in-picture"
           allowfullscreen></iframe>
         </body>

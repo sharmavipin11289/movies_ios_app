@@ -23,9 +23,11 @@ struct ContentView: View {
             .controlSize(.large)
         }
         .padding()
+        .fullScreenCover(item: $flutter.trailer) { request in
+            TrailerView(request: request)
+        }
     }
 }
-
 #Preview {
     ContentView()
 }

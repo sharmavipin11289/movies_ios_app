@@ -56,7 +56,7 @@ final class TrailerRequestTests: XCTestCase {
         let request = TrailerRequest(movieId: 1, title: "t", youtubeKey: "abc123")
 
         XCTAssertTrue(
-            request.embedHTML?.contains("youtube.com/embed/abc123") ?? false
+            request.embedHTML?.contains("youtube-nocookie.com/embed/abc123") ?? false
         )
     }
 
